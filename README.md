@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Project Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project leverages a modern tech stack designed to enhance performance, maintainability, and
+user experience. Below is the breakdown of each technology used in the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Frontend Technologies
 
-## Learn More
+### React
 
-To learn more about Next.js, take a look at the following resources:
+- **Purpose**: A JavaScript library for building user interfaces.
+- **Usage**: Enables the creation of reusable UI components, making the development process more
+  efficient.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Purpose**: A React framework for server-side rendering and static site generation.
+- **Usage**: Provides routing, API routes, and optimization features out of the box, enhancing SEO
+  and performance.
+
+### Styled-Components
+
+- **Purpose**: A library for writing CSS in JavaScript.
+- **Usage**: Allows for component-level styling, making it easier to manage styles in a modular way
+  while leveraging the full power of CSS.
+
+### Tailwind CSS
+
+- **Purpose**: A utility-first CSS framework.
+- **Usage**: Facilitates rapid UI development by providing predefined utility classes that can be
+  composed to create complex designs without leaving your HTML.
+
+## Custom Hook: `useScale`
+
+The `useScale` hook is designed to dynamically adjust the scale of a component based on the viewport
+height. This ensures that your UI remains visually appealing across different screen sizes.\*
+Purpose: To calculate and set a scaling factor that adjusts based on the height of the user's
+viewport.
+
+- Usage: Initializes a state variable `scale` with a default value of `1`.
+  - On component mount and window resize events, it calculates the new scale based on a base height
+    (800 pixels in this case).
+  - The scale value is updated accordingly, ensuring that it does not exceed `1`, which maintains
+    the integrity of your layout.
+
+## Architectural Pattern
+
+### FSD (Feature-Sliced Design)
+
+- **Purpose**: An architectural approach that emphasizes feature-driven development.
+- **Usage**: Organizes code into features rather than technical layers, improving scalability and
+  maintainability. Each feature contains its own components, styles, and logic, promoting separation
+  of concerns.
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+= The easiest way to deploy your Next.js app is to use the
+[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out our
+[Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
+for more details.
