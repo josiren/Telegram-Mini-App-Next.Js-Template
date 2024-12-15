@@ -10,11 +10,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "next": "15.0.2",
     "prettier": "^3.3.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "styled-components": "^6.1.13"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@telegram-apps/sdk": "^2.5.2",

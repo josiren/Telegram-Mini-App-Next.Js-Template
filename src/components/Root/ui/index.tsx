@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 
 import { postEvent } from '@telegram-apps/sdk';
 import { SDKProvider } from '@telegram-apps/sdk-react';
-import { StyledComponentsRegistry } from '@/components';
 
 import '@/shared/ui/styles/globals.css';
 
@@ -24,11 +23,9 @@ export const Root = ({ children }: { children: React.ReactNode }) => {
   }, []);
   return (
     <SDKProvider>
-      <StyledComponentsRegistry>
-        <html lang="en">
-          <body>{children}</body>
-        </html>
-      </StyledComponentsRegistry>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
     </SDKProvider>
   );
 };
