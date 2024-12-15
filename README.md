@@ -25,11 +25,12 @@ user experience. Below is the breakdown of each technology used in the project:
 - **Usage**: Provides routing, API routes, and optimization features out of the box, enhancing SEO
   and performance.
 
-### Styled-Components
+### Emotion
 
-- **Purpose**: A library for writing CSS in JavaScript.
-- **Usage**: Allows for component-level styling, making it easier to manage styles in a modular way
-  while leveraging the full power of CSS.
+- **Purpose**: A powerful library for writing CSS in JavaScript, particularly designed for React
+  applications.
+- **Usage**: Enables developers to apply styles at the component level, promoting modularity and
+  maintainability in styling.
 
 ### Tailwind CSS
 
